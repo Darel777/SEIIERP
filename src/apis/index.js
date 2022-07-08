@@ -1,0 +1,201 @@
+//TEST
+const TEST_GET = "/api/test/get";
+const TEST_POST = "/api/test/post";
+
+const AUTH = "/api/user/auth"
+const LOGIN = "/api/user/login"
+const REGISTER = '/api/user/register'
+
+// 商品分类管理
+const COMMODITY_CLASSIFICATION_ALL = '/api/category/queryAll'
+const COMMODITY_CLASSIFICATION_CREATE = '/api/category/create'
+const COMMODITY_CLASSIFICATION_UPDATE = '/api/category/update'
+const COMMODITY_CLASSIFICATION_DELETE = '/api/category/delete'
+
+// 商品管理
+const COMMODITY_ALL = '/api/product/queryAll';
+const COMMODITY_CREATE = '/api/product/create';
+const COMMODITY_UPDATE = '/api/product/update';
+const COMMODITY_DELETE = '/api/product/delete';
+
+
+const WAREHOUSE_INPUT = '/api/warehouse/input';
+const WAREHOUSE_OUTPUT_PRE = '/api/warehouse/product/count';
+const WAREHOUSE_OUTPUT = '/api/warehouse/output';
+const WAREHOUSE_GET_INPUTSHEET = '/api/warehouse/inputSheet/state';
+const WAREHOUSE_GET_OUTPUTSHEET = '/api/warehouse/outputSheet/state';
+const WAREHOUSE_IO_DEATIL_BY_TIME = '/api/warehouse/sheetContent/time';
+const WAREHOUSE_IPQ_BY_TIME = '/api/warehouse/inputSheet/time/quantity';
+const WAREHOUSE_OPQ_BY_TIME = '/api/warehouse/outputSheet/time/quantity';
+const WAREHOUSE_OUTPUTSHEET_APPROVE = '/api/warehouse/outputSheet/approve';
+const WAREHOUSE_INPUTSHEET_APPROVE = '/api/warehouse/inputSheet/approve';
+const WAREHOUSE_DAILY_COUNT = '/api/warehouse/warehouse/counting';
+
+
+// 销售管理
+// 进货管理
+const PURCHASE_ALL = '/api/purchase/sheet-show';
+const PURCHASE_FIND_SHEET_BY_ID = '/api/purchase/find-sheet';
+const PURCHASE_CREATE = '/api/purchase/sheet-make';
+const PURCHASE_FIRST_APPROVAL = '/api/purchase/first-approval';
+const PURCHASE_SECOND_APPROVAL = '/api/purchase/second-approval';
+// 进货退货管理
+const PURCHASE_RETURN_ALL = '/api/purchase-returns/sheet-show';
+const PURCHASE_RETURN_CREATE = '/api/purchase-returns/sheet-make';
+const PURCHASE_RETURN_FIRST_APPROVAL = '/api/purchase-returns/first-approval';
+const PURCHASE_RETURN_SECOND_APPROVAL = '/api/purchase-returns/second-approval';
+// 销售管理
+const SALE_ALL = '/api/sale/sheet-show';
+const SALE_CREATE = '/api/sale/sheet-make';
+const SALE_FIRST_APPROVAL = '/api/sale/first-approval';
+const SALE_SECOND_APPROVAL = '/api/sale/second-approval';
+const SALE_FIND_SHEET_BY_ID = '/api/sale/find-sheet';
+//销售退货管理
+const SALE_RETURN_ALL = '/api/sale-returns/sheet-show';
+const SALE_RETURN_CREATE = '/api/sale-returns/sheet-make';
+const SALE_RETURN_FIRST_APPROVAL = '/api/sale-returns/first-approval';
+const SALE_RETURN_SECOND_APPROVAL = '/api/sale-returns/second-approval';
+// 客户管理
+const CUSTOMER_QUERY = '/api/customer/findByType';
+const SALE_PURCHASE_ALL = '/api/purchase/sheet-show';
+const SALE_PURCHASE_CREATE = '/api/purchase/sheet-make';
+const SALE_CUSTOMER_QUERY = '/api/customer/findByType';
+const SALE_CUSTOMER_MAX = '/api/sale/maxAmountCustomer';
+const ADD_CUSTOMER = '/api/customer/create-cus';
+const DEL_CUSTOMER = '/api/customer/delete-cus';
+const GET_EXCEL = '/api/warehouse/warehouse/excel';
+//每日打卡
+const Q_DAO =  '/api/sign-in/sign-in';
+const GET_ALL_USER = '/api/sign-in/findall';
+const CHECK_SIGN_IN = '/api/sign-in/check-sign-in';
+const FIRE = '/api/sign-in/fire';
+const ADJUST= '/api/sign-in/adjust';
+//account
+const GET_ALL_ACCOUNT= '/api/account/findall';
+const ADD_ACCOUNT= '/api/account/create';
+const ADJUST_ACCOUNT= '/api/account/update';
+const DEL_ACCOUNT= '/api/account/delete';
+//collection_sheet
+const MAKE_COLLECTION_SHEET= '/api/receipt/receipt-make';
+const GET_COLLECTION_SHEET_BY_STATE = '/api/receipt/receipt-show';
+const APPROVAL_COLLECTION_SHEET = '/api/receipt/approval'
+//purchase_sheet
+const MAKE_PURCHASE_SHEET= '/api/payment/make-payment';
+const GET_PURCHASE_SHEET_BY_STATE= '/api/payment/find-payment';
+const APPROVAL_PURCHASE_SHEET = '/api/payment/approval'
+//RED WAVE
+const RED_SALE = '/api/Red/RedSale';
+const RED_SALE_RETURN = '/api/Red/RedSaleReturn';
+const RED_PURCHASE = '/api/Red/RedPurchase';
+const RED_PURCHASE_RETURN = '/api/Red/RedPurchaseReturn';
+const RED_COLLECTION_SHEET = '/api/Red/RedReceipt';
+const RED_PURCHASE_SHEET = '/api/Red/RedPayment';
+const RED_WAGES_SHEET = '/api/Red/RedWages';
+//salary_sheet
+const GET_SALARY_SHEET_BY_STATE = '/api/wages/wages-show';
+const MAKE_SALARY_SHEET = '/api/wages/wages-make';
+const WAGES_FIRST = '/api/wages/first-approval';
+const WAGES_SECOND = '/api/wages/second-approval';
+const GET_WAGES_SHEET_BY_STATE = '/api/wages/wages-show';
+const MING_XI = '/api/business-history/sale';
+const MING_XI_RETURN = '/api/business-history/sale-return';
+const GET_ALL_PROCESSING = '/api/business-condition/show-condition';
+const FIND_ALL_SALARY_STRATEGY = '/api/SalaryRuleController/findall';
+const UPDATE_SALARY_STRATEGY = '/api/SalaryRuleController/update';
+const FIND_YEAR_END = '/api/year-bonus/bonus-show';
+const UPDATE_YEAR_END = '/api/year-bonus/bonus-make';
+const SALE_STRATEGY = '/api/sale/saleStrategy'
+
+
+module.exports = {
+  SALE_STRATEGY,
+  FIND_YEAR_END,
+  UPDATE_YEAR_END,
+  UPDATE_SALARY_STRATEGY,
+  FIND_ALL_SALARY_STRATEGY,
+  GET_ALL_PROCESSING,
+  MING_XI,
+  MING_XI_RETURN,
+
+  GET_WAGES_SHEET_BY_STATE,
+  GET_SALARY_SHEET_BY_STATE,
+  MAKE_SALARY_SHEET,
+  WAGES_FIRST,
+  WAGES_SECOND,
+
+  RED_SALE,
+  RED_SALE_RETURN,
+  RED_PURCHASE,
+  RED_PURCHASE_RETURN,
+  RED_COLLECTION_SHEET,
+  RED_PURCHASE_SHEET,
+  RED_WAGES_SHEET,
+
+  TEST_GET,
+  GET_EXCEL,
+  TEST_POST,
+  ADD_CUSTOMER,
+  DEL_CUSTOMER,
+  AUTH,
+  LOGIN,
+  REGISTER,
+  COMMODITY_CLASSIFICATION_ALL,
+  COMMODITY_CLASSIFICATION_CREATE,
+  COMMODITY_CLASSIFICATION_UPDATE,
+  COMMODITY_CLASSIFICATION_DELETE,
+
+  COMMODITY_ALL,
+  COMMODITY_CREATE,
+  COMMODITY_UPDATE,
+  COMMODITY_DELETE,
+
+  WAREHOUSE_INPUT,
+  WAREHOUSE_OUTPUT_PRE,
+  WAREHOUSE_OUTPUT,
+  WAREHOUSE_GET_INPUTSHEET,
+  WAREHOUSE_GET_OUTPUTSHEET,
+  WAREHOUSE_IO_DEATIL_BY_TIME,
+  WAREHOUSE_IPQ_BY_TIME,
+  WAREHOUSE_OPQ_BY_TIME,
+  WAREHOUSE_OUTPUTSHEET_APPROVE,
+  WAREHOUSE_INPUTSHEET_APPROVE,
+  WAREHOUSE_DAILY_COUNT,
+
+  PURCHASE_ALL,
+  PURCHASE_CREATE,
+  PURCHASE_FIRST_APPROVAL,
+  PURCHASE_SECOND_APPROVAL,
+  PURCHASE_RETURN_ALL,
+  PURCHASE_RETURN_CREATE,
+  PURCHASE_RETURN_FIRST_APPROVAL,
+  PURCHASE_RETURN_SECOND_APPROVAL,
+  PURCHASE_FIND_SHEET_BY_ID,
+
+  SALE_ALL,
+  SALE_CREATE,
+  SALE_FIRST_APPROVAL,
+  SALE_SECOND_APPROVAL,
+  SALE_CUSTOMER_QUERY,
+  SALE_CUSTOMER_MAX,
+  SALE_FIND_SHEET_BY_ID,
+  CUSTOMER_QUERY,
+  SALE_RETURN_ALL,
+  SALE_RETURN_CREATE,
+  SALE_RETURN_FIRST_APPROVAL,
+  SALE_RETURN_SECOND_APPROVAL,
+  Q_DAO,
+  GET_ALL_USER,
+  CHECK_SIGN_IN,
+  FIRE,
+  ADJUST,
+  ADD_ACCOUNT,
+  DEL_ACCOUNT,
+  ADJUST_ACCOUNT,
+  GET_ALL_ACCOUNT,
+  MAKE_COLLECTION_SHEET,
+  GET_COLLECTION_SHEET_BY_STATE,
+  APPROVAL_COLLECTION_SHEET,
+  MAKE_PURCHASE_SHEET,
+  GET_PURCHASE_SHEET_BY_STATE,
+  APPROVAL_PURCHASE_SHEET
+};
